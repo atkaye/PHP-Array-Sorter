@@ -1,17 +1,9 @@
-PHP-ArraySorter
-===============
+<?php
+require 'ArraySorter.class.php';
 
-Super simple sorting of arrays in PHP
-
-## Features
-- Sort multi-dimmensional arrays or arrays of objects
-- [Apply multiple ordering rules (similar to MySQL)][multiple-rules]
-- [Case-insensitve sorting (PHP 5.4)][case-insensitive]
-- [Sort using a closure or class method][closure]
-- [Sort without modyfying array keys][keep-keys]
-
-### Apply multiple ordering rules (similar to MySQL)
-```php
+/*****************************************************
+ * Example 1: Apply multiple sort rules
+ ****************************************************/
 $input = array(
     array(
         'name'  => 'John',
@@ -32,12 +24,13 @@ $output = ArraySorter::create($input)
             ->addRule('age')
             ->addRule('name', SORT_DESC)
             ->sort();
-            
-// $output => John, James, Jack
-```
 
-### Case-insensitve sorting (PHP 5.4)
-```php
+// $output => James, John, Jack
+
+
+/*****************************************************
+ * Example 2: Case insensitive sorting (PHP 5.4)
+ ****************************************************/
 $input = array(
     array(
         'name'  => 'john',
@@ -58,12 +51,13 @@ $output = ArraySorter::create($input)
             ->addRule('age')
             ->addRule('name', SORT_DESC, SORT_STRING | SORT_FLAG_CASE)
             ->sort();
-            
-// $output => jonn, James, Jack
-```
 
-### Sort using a closure or class method
-```php
+// $output => James, John, Jack
+
+
+/*****************************************************
+ * Example 3: Sort objects using a class method
+ ****************************************************/
 $input = array(
     new DateTime('2013-01-01'),
     new DateTime('2014-01-01'),
@@ -77,10 +71,11 @@ $output = ArraySorter::create($input)->addRule(function($date) {
 })->sort();
 
 // $output => 2012-01-01, 2013-01-01, 2014-01-01
-```
 
-### Sort without modyfying array keys
-```php
+
+/*****************************************************
+ * Example 4: Sort without modifying array keys
+ ****************************************************/
 $input = array(
     'John'  => 31,
     'Jack'  => 32,
@@ -90,23 +85,3 @@ $input = array(
 $output = ArraySorter::create($input)->sort(TRUE);
 
 // $output => James, John, Jack
-```
-## Coming Soon
-- Pass array key to closure function
-- Support for pass-by-reference
-- Performance improvements
-- Case-insensitive sorting for PHP 5.3
-- Add Documentation for `SORT_NATURAL`
-- PHPUnit tests
-
-## Current Version
-0.1
-
-## License
-[MIT][license]
-
-[multiple-rules]:#apply-multiple-ordering-rules-similar-to-mysql
-[case-insensitive]:#case-insensitve-sorting-php-54
-[closure]:#sort-using-a-closure-or-class-method
-[keep-keys]:#sort-without-modyfying-array-keys
-[license]:https://github.com/atkaye/PHP-ArraySorter/blob/master/LICENSE
