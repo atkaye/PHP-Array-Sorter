@@ -102,7 +102,7 @@ $output = ArraySorter::create($input)->sort(TRUE);
 - PHPUnit tests
 
 ## Current Version
-0.1
+0.1.1
 
 ## License
 [MIT][license]
