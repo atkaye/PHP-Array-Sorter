@@ -3,6 +3,8 @@ PHP-ArraySorter
 
 Super simple sorting of arrays in PHP
 
+ [![Build Status](https://secure.travis-ci.org/atkaye/PHP-ArraySorter.png)](http://travis-ci.org/atkaye/PHP-ArraySorter)
+
 ## Features
 - Sort multi-dimmensional arrays or arrays of objects
 - [Apply multiple ordering rules (similar to MySQL)][multiple-rules]
