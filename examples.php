@@ -1,5 +1,5 @@
 <?php
-require 'ArraySorter.class.php';
+require __DIR__ . '/src/ArraySorter.class.php';
 
 /*****************************************************
  * Example 1: Apply multiple sort rules
