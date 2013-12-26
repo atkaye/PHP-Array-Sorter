@@ -43,7 +43,10 @@ class ArraySorter {
      * 
      * @var array $array
      */
-    public function __construct(array $array) {
+    public function __construct($array) {
+        if(!is_array($array)) {
+            throw new ArraySorterException('$array parameter must be an array');
+        }
         $this->array = $array;
     }
 
@@ -186,7 +189,10 @@ class ArraySorter {
      * @param array $array
      * @return static
      */
-    public static function create(array $array) {
+    public static function create($array) {
+        if(!is_array($array)) {
+            throw new ArraySorterException('$array parameter must be an array');
+        }
         $class = __CLASS__;
         return new $class($array);
     }
