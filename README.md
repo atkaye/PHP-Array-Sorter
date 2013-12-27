@@ -10,7 +10,7 @@ Super simple sorting of arrays in PHP
 - [Apply multiple ordering rules (similar to MySQL)][multiple-rules]
 - [Case-insensitve sorting (PHP 5.4)][case-insensitive]
 - [Sort using a closure or class method][closure]
-- [Sort without modyfying array keys][keep-keys]
+- [Sort without modifying array keys][keep-keys]
 
 ### Apply multiple ordering rules (similar to MySQL)
 ```php
