@@ -81,14 +81,14 @@ $output = ArraySorter::create($input)->addRule(function($date) {
 // $output => 2012-01-01, 2013-01-01, 2014-01-01
 ```
 
-### Sort without modyfying array keys
+### Sort without modifying array keys
 ```php
 $input = array(
     'John'  => 31,
     'Jack'  => 32,
     'James' => 30
 );
-// Sort names by value ASC without modyfying keys
+// Sort names by value ASC without modifying keys
 $output = ArraySorter::create($input)->sort(TRUE);
 
 // $output => James, John, Jack
@@ -110,5 +110,5 @@ $output = ArraySorter::create($input)->sort(TRUE);
 [multiple-rules]:#apply-multiple-ordering-rules-similar-to-mysql
 [case-insensitive]:#case-insensitve-sorting-php-54
 [closure]:#sort-using-a-closure-or-class-method
-[keep-keys]:#sort-without-modyfying-array-keys
+[keep-keys]:#sort-without-modifying-array-keys
 [license]:https://github.com/atkaye/PHP-ArraySorter/blob/master/LICENSE
