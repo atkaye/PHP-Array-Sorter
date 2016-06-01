@@ -1,4 +1,4 @@
-PHP-ArraySorter
+PHP Array Sorter
 ===============
 
 Super simple sorting of arrays in PHP
